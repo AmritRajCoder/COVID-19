@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Form</title>
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/599px-SARS-CoV-2_without_background.png">
+</head>
+<body>
+    <!--Navbar for links to other pages-->
+    <nav id="navbar">
+        <div class="nav1">
+            <ul>
+                <li><a href="index.html#home" target="_blank">HOME</a></li>
+                <li><a href="index.html#about" target="_blank">ABOUT</a></li>
+                <li><a href="index.html#prevent" target="_blank">PREVENTION</a></li>
+                <li><a href="index.html#timeline" target="_blank">TIMELINE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="regform">
+        <h1>Information Form</h1>
+    </div>
+
+    <div class="main">
+        <form id="testForm">
+            <div id="name">
+                <h2 class="name">Name</h2>
+                <label id="firstlabel"> First Name</label><br>
+                <input id="firstname" type="text" required name="first_name" placeholder="Jonathan"><br>
+                <label id="lastlabel"> Last Name</label><br>
+                <input id="lastname" type="text" required name="last_name" placeholder="Andrews"><br>
+            </div>
+
+            <h2 class="name">Profession</h2>
+            <input id="profession" type="text" name="profession" placeholder="Student / Doctor / Teacher"><br>
+
+            <h2 class="name">Email</h2>
+            <input id="email" type="text" required name="email" placeholder="abc.xyz@gmail.com"><br>
+
+            <h2 class="name">Date of Birth</h2>
+            <input id="dateofbirth" type="date" required name="dateofbirth">
+            <br>
+            <h2 class="name">Mobile Number</h2>
+            <input id="mobile" type="text" name="mobile" required pattern="[789][0-9]{9}" placeholder="9876543210">
+            
+            <br>
+
+            <h2 class="name">State</h2>
+            <select id="state" name="state">
+                <option disabled="disabled" required selected="selected">CHOOSE</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
+            </select>
+
+              <br>
+
+        <span><h2 id="travel">Have you travelled to COVID-19 affected country within the last month?</h2></span>
+            <div id="travel">
+                <input type="radio" name="option" value="Yes"> Yes
+                <input type="radio" name="option" value="No"> No
+            </div>
+<br>
+        <span><h2>Do you have any of the following symptoms?</h2></span>
+            <div class="arrange">
+                <input type="checkbox" name="symptoms" value="Fever" id="sy1"><label for="sy1">Fever</label><br>
+                <input type="checkbox" name="symptoms" value="Weakness" id="sy2"><label for="sy2">Weakness</label><br>
+                <input type="checkbox" name="symptoms" value="Breathing Issues" id="sy3"><label for="sy3">Breathing Issues</label><br>
+                <input type="checkbox" name="symptoms" value="Dry Cough" id="sy4"><label for="sy4">Dry Cough</label><br>
+                <input type="checkbox" name="symptoms" value="Cold" id="sy5"><label for="sy5">Cold</label><br>
+                <input type="checkbox" name="symptoms" value="Chest Pain" id="sy6"><label for="sy6">Chest Pain</label><br>
+            </div>
+
+            <input id="submit" type="submit">
+
+            <h2 id="centres">Testing centres around you:</h2><span id="result"></span><br>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase.js"></script>
+    <script src="./testingScript.js"></script>
+</body>
+</html>
